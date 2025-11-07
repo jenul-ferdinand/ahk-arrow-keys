@@ -1,9 +1,10 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
+KeyHistory 0
 SendMode "Input"
 SetWorkingDir A_ScriptDir
 
-; ALT implied for this block
+; ALT
 CapsLock::Send "``"           ; CapsLock -> backtick
 
 !2::Send "{F2}"
@@ -42,5 +43,5 @@ CapsLock::Send "``"           ; CapsLock -> backtick
 !+^k::Send "+!{Down}"         ; multi-cursor down (Shift+Alt+Down)
 
 ; CTRL + SHIFT
-+^i::Send "+^{Up}"
-+^k::Send "+^{Down}"
++^i::Send "+^{Up}"            ; extend by line up
++^k::Send "+^{Down}"          ; extend by line down
